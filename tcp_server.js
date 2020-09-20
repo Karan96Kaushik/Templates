@@ -18,3 +18,7 @@ var server = net.createServer(function (socket) {
     })
 
 })
+
+console.log('Server Started');
+
+server.listen(1337, '0.0.0.0');

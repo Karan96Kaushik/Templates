@@ -1,12 +1,12 @@
 const mailjet = require("node-mailjet").connect(
-    "b251ad7b9604149c215dac117dff9bc3",
-    "d4463a80f3be65660476f5829ffb9445"
+    "KEY",
+    "SECRET"
   );
   
   var sendEmail = mailjet.post('send');
  
 var emailData = {
-    'FromEmail': 'service@crccanvas.us',
+    'FromEmail': 'service@MY_ADDRESS',
     'FromName': 'My Name',
     'Subject': 'Test with the NodeJS Mailjet wrapper',
     'Text-part': 'Hello NodeJs !',

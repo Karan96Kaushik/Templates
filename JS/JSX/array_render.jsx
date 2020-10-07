@@ -4,7 +4,9 @@ var Projects = [
     { projectName: "Big3", projectDate: "12:53 / 23/05/16", projectLink:"/projects/1236" },
 ]
 
-<div className={classes.listContainer}>
+(<div className={classes.listContainer}>
+
+
     {Projects.map(project => (
         <ProjectListItems
             projectName={project.projectName}
@@ -12,4 +14,6 @@ var Projects = [
             projectLink={project.projectLink}
         />
     ))}
-</div>
+
+
+</div>)

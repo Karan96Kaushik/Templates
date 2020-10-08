@@ -1,15 +1,14 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider, darkTheme, lightTheme, ThemeContext } from './Theme';
+import { ThemeProvider, lightTheme, ThemeContext, darkTheme } from './Theme';
 import Switch from './Switch';
 import { useState } from 'react';
 
-function Main(props) {
-    var [theme, setTheme] = useState({ dark: false, theme: lightTheme })
+export default function Main(props) {
+    var [theme, setTheme] = useState({ dark: false })
 
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
-            <ThemeProvider theme={theme.theme}>
+            <ThemeProvider theme={theme.dark? darkTheme:lightTheme}>
                 <Switch />
             </ThemeProvider>
         </ThemeContext.Provider>
